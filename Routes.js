@@ -6,9 +6,12 @@ import ContactInfo from './pages/ContactInfo';
 import Confirm from './pages/Confirm/Confirm';
 import AmSure from './pages/Confirm/AmSure';
 import SideDrawer from './components/SideDrawer/SideDrawer';
-
+import MenuItems from './components/SideDrawer/MenuItems';
+import Flow1 from'./pages/Flow1';
 //Pages will stack, hitting back will not remount them
 //Clicking links will cause them to mount again
+
+//Addind drawer causes thigns in the drawer scenes to unmount
 class Routes extends Component{
     constructor(props){
         super(props);
@@ -19,21 +22,21 @@ class Routes extends Component{
             <Router>
                 <Scene key="root">
                     <Scene key="home" component={Home} hideNavBar={true} />
+                    <Scene key="flow1" component={Flow1} />
                     {/*Stack has a navbar..so hide it or else all children inherit*/}
-                    <Scene tabs={true} key="draw">
-                    <SideDrawer>
-                        <Stack initial={true} key="account"  title="Account Mgmt">
+                        <Stack initial={true} key="account"  title="Account Mgmt" hideNavBar={true}>
+
+                            <Scene key="drawer" drawer contentComponent={MenuItems}>
                             {/*Now we let the children have their own navBars*/}
                             <Scene key="dashboard" hideNavBar={false} component={Dashboard} title="Dashboard"/>
                             <Scene key="contact" hideNavBar={false} component={ContactInfo} title=" Contact Info"/>
                             {/*first sub scene*/}
-                            <Stack title="Confirm parents" key="confirm_tabs" >
+                            <Stack key="confirm_tabs" >
                                 <Scene key="confirm" component={Confirm} title="Confirm"/>
                                 <Scene key="amsure" component={AmSure} title="Am Sure"/>
                             </Stack>
+                            </Scene>
                         </Stack>
-                    </SideDrawer>
-                    </Scene>
                 </Scene>
             </Router>
         )

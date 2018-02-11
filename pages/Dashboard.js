@@ -16,6 +16,10 @@ class Dashboard extends Component{
                     <Text>Click to Contact Info</Text>
                 </TouchableOpacity>
 
+                <View style={{padding: 39}}/>
+                <TouchableOpacity onPress={Actions.home}>
+                    <Text>To home screen</Text>
+                </TouchableOpacity>
 
             </View>
         )

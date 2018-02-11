@@ -3,11 +3,11 @@ import {TouchableOpacity, Text, View} from 'react-native';
 
 const NavLinks = (props) => {
     return (
-        <View style={{flex:1}}>
             <TouchableOpacity onPress={props.onPress}>
+                <Text>
                 {props.name}
+                </Text>
             </TouchableOpacity>
-        </View>
     )
 };
 

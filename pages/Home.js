@@ -16,6 +16,11 @@ class Home extends Component{
                 <TouchableOpacity onPress={Actions.dashboard}>
                     <Text>Click to Dashboard page</Text>
                 </TouchableOpacity>
+
+                <View style={{paddingTop:20}}/>
+                <TouchableOpacity onPress={Actions.flow1}>
+                    <Text>Click to flow1 scene</Text>
+                </TouchableOpacity>
             </View>
         )
     }

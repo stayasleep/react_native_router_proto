@@ -6,24 +6,31 @@ import {Actions, ActionConst} from 'react-native-router-flux';
 const items =[
     {
         name:"Dashboard",
-        onPress: null
+        onPress: Actions.dashboard
     },
     {
         name: "Contact",
-        onPress: null
+        onPress: ()=>Actions.contact()
     },
     {
         name: "Confirm",
-        onPress: null
+        onPress: ()=>Actions.confirm_tabs()
     }
 ];
 
 class MenuItems extends Component{
+    constructor(props){
+        super(props);
+    }
+    //add method?
+    //if this.props.activeItemKey === "key_name" then add highlighting
+    //pass as props to the child the activeItem and in the child use ternary in the touchable
     render(){
+        console.log('render menu items',this.props);
         return(
             <View style={{flex:1}}>
                 <View>
-                    <Text style={{color:"#FFF", backgroundColor:"#000"}}>
+                    <Text>
                         This is my menu list...{"\n"}
                         Be amazed at the powers before ye.{"\n"}
                         Notice the highlighted tab styling

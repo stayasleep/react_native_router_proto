@@ -5,6 +5,15 @@ class AmSure extends Component{
     constructor(props){
         super(props);
     }
+    componentWillMount(){
+        console.log('will mount amsure');
+    }
+    componentDidMount(){
+        console.log('did mount amsure');
+    }
+    componentWillUnmount(){
+        console.log('unmount amsure');
+    }
     render(){
         console.log('am sure render',this.props);
         return(
