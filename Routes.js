@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Actions, Router, Scene, Stack, Drawer, Tabs} from 'react-native-router-flux';
+import {Actions,ActionConst, Router, Scene, Stack, Drawer, Tabs} from 'react-native-router-flux';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import ContactInfo from './pages/ContactInfo';
@@ -21,7 +21,7 @@ class Routes extends Component{
         return(
             <Router>
                 <Scene key="root">
-                    <Scene key="home" component={Home} hideNavBar={true} />
+                    <Scene key="home" component={Home} hideNavBar={true}/>
                     <Scene key="flow1" title="Flow 1" component={Flow1} />
                     {/*Stack has a navbar..so hide it or else all children inherit*/}
                         <Stack initial={true} key="account"  title="Account Mgmt" hideNavBar={true}>
@@ -33,7 +33,7 @@ class Routes extends Component{
                                 {/*first sub scene*/}
                                 <Stack key="confirm_tabs" >
                                     <Scene key="confirm" component={Confirm} title="Confirm"/>
-                                    <Scene key="amsure" back={true} component={AmSure} title="Am Sure" drawerLockMode={"locked-closed"}/>
+                                    <Scene type={ActionConst.REPLACE}  key="amsure" back={true} component={AmSure} title="Am Sure" drawerLockMode={"locked-closed"}/>
                                 </Stack>
                             </Scene>
                         </Stack>

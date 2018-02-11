@@ -18,7 +18,7 @@ class Home extends Component{
                 </TouchableOpacity>
 
                 <View style={{paddingTop:20}}/>
-                <TouchableOpacity onPress={Actions.flow1}>
+                <TouchableOpacity onPress={()=>Actions.replace("flow1")}>
                     <Text>Click to flow1 scene</Text>
                 </TouchableOpacity>
             </View>
