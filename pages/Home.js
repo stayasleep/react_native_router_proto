@@ -13,7 +13,7 @@ class Home extends Component{
                 </Text>
 
                 <View style={{paddingTop:20}}/>
-                <TouchableOpacity onPress={Actions.dashboard}>
+                <TouchableOpacity onPress={Actions.account}>
                     <Text>Click to Dashboard page</Text>
                 </TouchableOpacity>
 

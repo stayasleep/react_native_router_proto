@@ -33,7 +33,7 @@ class Routes extends Component{
                                 {/*first sub scene*/}
                                 <Stack key="confirm_tabs" >
                                     <Scene key="confirm" component={Confirm} title="Confirm"/>
-                                    <Scene key="amsure" back={true} component={AmSure} title="Am Sure"/>
+                                    <Scene key="amsure" back={true} component={AmSure} title="Am Sure" drawerLockMode={"locked-closed"}/>
                                 </Stack>
                             </Scene>
                         </Stack>
