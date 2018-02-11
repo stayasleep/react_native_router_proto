@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Actions, Router, Scene, Stack, Drawer} from 'react-native-router-flux';
+import {Actions, Router, Scene, Stack, Drawer, Tabs} from 'react-native-router-flux';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import ContactInfo from './pages/ContactInfo';
@@ -26,7 +26,7 @@ class Routes extends Component{
                     {/*Stack has a navbar..so hide it or else all children inherit*/}
                         <Stack initial={true} key="account"  title="Account Mgmt" hideNavBar={true}>
 
-                            <Scene key="drawer" drawer contentComponent={MenuItems}>
+                            <Scene key="drawer" hideNavBar drawer contentComponent={MenuItems}>
                                 {/*Now we let the children have their own navBars*/}
                                 <Scene key="dashboard" hideNavBar={false} component={Dashboard} title="Dashboard"/>
                                 <Scene key="contact" hideNavBar={false} component={ContactInfo} title=" Contact Info"/>

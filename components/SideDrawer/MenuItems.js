@@ -15,6 +15,10 @@ const items =[
     {
         name: "Confirm",
         onPress: ()=>Actions.confirm_tabs()
+    },
+    {
+        name: "Home",
+        onPress: ()=> Actions.home()
     }
 ];
 
