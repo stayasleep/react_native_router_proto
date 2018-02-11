@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
+import {Actions} from 'react-native-router-flux';
 
 class Home extends Component{
     render(){
@@ -7,9 +8,14 @@ class Home extends Component{
             <View style={{flex:1}}>
                 <Text>
                     This is the home screen {"\n"}
-                    It wont have a navigation bar and it should not have a side drawer
+                    It wont have a title bar and it should not have a side drawer
                     Here is a link to a page that has both things.
                 </Text>
+
+                <View style={{paddingTop:20}}/>
+                <TouchableOpacity onPress={Actions.dashboard}>
+                    <Text>Click to Dashboard page</Text>
+                </TouchableOpacity>
             </View>
         )
     }

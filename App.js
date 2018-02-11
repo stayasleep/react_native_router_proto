@@ -6,6 +6,11 @@ import {
   View
 } from 'react-native';
 import {Scene, Router, Actions, ActionConst, Tabs, Drawer, Stack} from 'react-native-router-flux';
+import Home from './pages/Home';
+import ContactInfo from './pages/ContactInfo';
+import Dashboard from './pages/Dashboard';
+import Confirm from './pages/Confirm/Confirm';
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -17,10 +22,11 @@ const instructions = Platform.select({
 type Props = {};
 export default class App extends Component<Props> {
   render() {
+      console.log('hey girl');
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native! lol
+          Welcome to React Native! lol....
         </Text>
         <Text style={styles.instructions}>
           To get started, edit App.js
