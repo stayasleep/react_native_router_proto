@@ -10,6 +10,8 @@ class Dashboard extends Component{
                     Notice my navBar titles {"\n"}
                     I have two- one from Stack parent and one from myself
                     And my drawer access.  I will also reset the nav stack.
+                    Logged in users will be sent here. {'\n'}
+                    This scene should replace prior scene(if it exists) as to prevent back nav issues
                 </Text>
                 <View style={{paddingTop:20}}/>
                 <TouchableOpacity onPress={Actions.contact}>

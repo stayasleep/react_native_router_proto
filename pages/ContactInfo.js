@@ -27,8 +27,7 @@ class ContactInfo extends Component{
                     This should add to the nav stack and have access to the drawer
                 </Text>
                 <Text>
-                    v4 is not without fault. Watch as clicking confirm renders a back arrow, and when clicking it will take you back to the same page
-                    you are on, confirm scene
+                    FlappCards Profile page for logged users
                 </Text>
                 <View style={{paddingTop:20}}/>
                 <TouchableOpacity onPress={Actions.confirm_tabs}>

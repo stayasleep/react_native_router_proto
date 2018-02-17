@@ -8,8 +8,7 @@ class Home extends Component{
             <View style={{flex:1}}>
                 <Text>
                     This is the home screen {"\n"}
-                    It wont have a title bar and it should not have a side drawer
-                    Here is a link to a page that has both things.
+                    FlappCard guests (not logged in) will see this page.
                 </Text>
 
                 <View style={{paddingTop:20}}/>

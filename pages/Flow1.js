@@ -24,7 +24,8 @@ class Flow1 extends Component{
                 <Text>
                     This is the flow one activation screen {"\n"}
                     Unless changed, i inherit a back button.  {"\n"}
-                    This should add to the nav stack and have access to the drawer
+                    This should add to the nav stack and have access to the drawer{'\n'}
+                    This scene should be used when we are looking at StackOverview as it is a new top level scene.
                 </Text>
 
                 <View style={{paddingTop:20}}/>

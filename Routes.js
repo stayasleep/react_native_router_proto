@@ -22,14 +22,14 @@ class Routes extends Component{
             <Router>
                 <Scene key="root">
                     <Scene key="home" component={Home} hideNavBar={true}/>
-                    <Scene key="flow1" title="Flow 1" component={Flow1} />
+                    <Scene key="flow1" title="FlappCards Flow1" component={Flow1} />
                     {/*Stack has a navbar..so hide it or else all children inherit*/}
                         <Stack initial={true} key="account"  title="Account Mgmt" hideNavBar={true}>
 
                             <Scene key="drawer" hideNavBar drawer contentComponent={MenuItems}>
                                 {/*Now we let the children have their own navBars*/}
-                                <Scene key="dashboard" hideNavBar={false} component={Dashboard} title="Dashboard"/>
-                                <Scene key="contact" hideNavBar={false} component={ContactInfo} title=" Contact Info"/>
+                                <Scene key="dashboard" hideNavBar={false} component={Dashboard} title=" FlappCards Dashboard"/>
+                                <Scene key="contact" hideNavBar={false} component={ContactInfo} title=" FlappCards - Profile"/>
                                 {/*first sub scene*/}
                                 <Stack key="confirm_tabs" >
                                     <Scene key="confirm" component={Confirm} title="Confirm"/>
