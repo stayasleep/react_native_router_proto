@@ -35,9 +35,9 @@ class MenuItems extends Component{
             <View style={{flex:1}}>
                 <View>
                     <Text>
-                        This is my menu list...{"\n"}
+                        FlappCards Menu List...{"\n"}
                         Be amazed at the powers before ye.{"\n"}
-                        Notice the highlighted tab styling
+                        Notice the highlighted tab styling (WIP)
                     </Text>
                 </View>
 
